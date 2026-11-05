@@ -1,0 +1,21 @@
+name: shifters-fe
+version: 1.0.0
+description: APM project for shifters-fe
+author: maxisun
+# Which agent platforms to deploy to.
+# Resolution order: --target flag > this field > auto-detect from filesystem.
+# Accepted values: agent-skills, antigravity, claude, codex, copilot, cursor, gemini, grok-bot, grok-build, hermes, kiro, opencode, vscode, windsurf
+targets:
+  - opencode
+dependencies:
+  apm:
+    - mattpocock/skills
+    - painhardcore/pstack/skills/create-verification-skill#v1.2.0
+    - painhardcore/pstack/skills/maintain-verification-skill#v1.2.0
+    - git: DietrichGebert/ponytail
+      ref: 96608e078b2d5ea607c5c3b8b5a54d1c1fba6846
+      skills:
+        - ponytail
+  mcp: []
+includes: auto
+scripts: {}
